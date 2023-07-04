@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    scroll-behavior: smooth;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+:root{
+    --bg-orange: #e84949
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.nav-bar{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.u-image{
+    width: 80px;
+}
+
+.navbar-right{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0 4rem;
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.name{
+    margin: -1.2rem;
+    font-size: 28px;
+}
+
+.navbar-right a{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: font-weight 0.8s;
+}
+
+.navbar-right a:hover{
+    font-weight: bold;
+}
+
+.hero-section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.hero-sec-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.unselected-text-Uday{
+    position: absolute;
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231, 231, 231);
+
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+
+}
+
+.myself{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.rolling-text{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+.desc{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.btn-pink {
+    background-color: #e84949;
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    /* transition: transform 0.5s;s */
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+.btn-pink::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left : 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s;
+}
+.btn-pink:hover::before {
+    transform: scaleX(1);
+}
+
+.btn-pink:hover{
+    color: black;
+}
+
+.hero-sec-right{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.my-image{
+    padding: 2.5rem;
+    width: 375px;
+    filter: grayscale(1);
+    animation: scaleImage 5s linear infinite;
+}
+
+@keyframes scaleImage{
+    0%{
+        filter: grayscale(0);
+        scale: 1;
+    }
+    50%{
+        scale: 1.1;
+        filter: grayscale(1);
+        box-shadow: 3px 3px 10px black;
+    }
+    100%{
+        scale: 1;
+        filter: grayscale(0);
+    }
+}
+
+.dots{
+    bottom: -1rem;
+    right: 0;
+    animation: dotAnime 4s infinite;
+}
+
+@keyframes dotAnime {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.cube{
+    top: -0.8rem;
+    right: 0.5em;
+    animation: cubeAnime 3s infinite;
+}
+
+@keyframes cubeAnime {
+    0%{
+        transform: rotateY(0deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(12px);
+    }
+    100%{
+        transform: rotateY(360deg) translateY(0px);
+    }
+}
+
+.circle{
+    left: 0;
+    bottom: 0;
+    animation: circleAnime 4s infinite;
+}
+
+@keyframes circleAnime {
+    50%{
+        left: 5%;
+        bottom: 10%;
+    }
+}
+
+.zigzags{
+    top: 1.5em;
+    left: -0.3em;
+    animation: zigzagAnime 4s infinite;
+}
+
+@keyframes zigzagAnime {
+    50%{
+        left: 5%;
+        top: 2%;
+    }
+}
+
+.plus{
+    top: -0.8rem;
+    left: 50%;
+    animation: plusAnime 4s ease-in infinite;
+}
+
+@keyframes plusAnime {
+    50%{
+        top: 3%;
+        left: 48%;
+    }
+}
+
+.projects-sec{
+    /* width: 100%; */
+    margin-top: 4rem;
+    background-color: rgb(231, 231, 231);
+}
+
+.project-heading{
+    color: var(--bg-orange);
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.cards-sec{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    gap: 120px;
+    position: relative;
+}
+
+.project-card{
+    position: relative;
+    width: 90%;
+    height: 550px;
+    background-image: url(./projects/Project2.png);
+    background-size: cover;
+    box-shadow: 0px 0px 40px #1f1f1f;
+}
+
+.project-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    transform: scaleX(1);
+    z-index: 0;
+}
+
+.project-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s;
+    z-index: 1;
+}
+
+.project-card:hover::before{
+    transform: scaleX(1);
+}
+
+.card-number{
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    z-index: 10;
+    opacity: 0;
+    /* transition: opacity 0.8s; */
+}
+
+.right{
+    right: -40px;
+    top: -45px;
+}
+
+.left{
+    left: -40px;
+    top: -45px;
+}
+
+.card-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    transition: transform 0.8s;
+}
+
+.card-content-left{
+    left: 10%;
+}
+
+.card-content-right{
+    right: 10%;
+}
+
+.project-skills-image{
+    /* bottom: 70%; */
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-skills-image img{
+    width: 40px;
+}
+
+.card-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.card-desc{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.btn-group{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: color 0.8s;
+}
+
+.icon:hover{
+    color: var(--bg-orange);
+}
+
+.project-card:hover .card-content{
+    transform: scale(1.1);
+}
+
+.project-card:hover .card-number{
+    opacity: 1;
+}
+
+#card1{
+    background-image: url(./projects/Project1.png);
+}
+
+#card2{
+    margin-left: 120px;
+    background-image: url(./projects/Project2.png);
+}
+
+#card3{
+    background-image: url(./projects/Project3.png);
+}
+
+#card4{
+    margin-left: 120px;
+    background-image: url(./projects/Project4.png);
+}
+
+.me-and-tech-stack{
+    position: relative;
+    display: flex;
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.me-and-tech-stack-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.me-and-tech-stack-right{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.blob-style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: blobAnime 3s linear infinite;
+    z-index: -5;
+}
+
+@keyframes blobAnime{
+    50%{
+        top: 54%;
+        left: 56%;
+    }
+}
+
+.unselected-text-skills{
+    position: absolute;
+    font-size: 7em;
+    font-weight: bold;
+    color: rgb(231, 231, 231);
+    user-select: none;
+    bottom: -30%;
+    right: 0%;
+}
+
+.skills-logo{
+    width: 90px;
+    z-index: 10;
+    transition: transform 0.5s;
+}
+
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.left-heading{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--bg-orange);
+    line-height: 50px;
+}
+
+.M{
+    font-size: 90px;
+}
+
+.left-content{
+    margin-top: 1rem;
+    width: 84%;
+    text-align: justify;
+}
+
+.left-content p{
+    margin: 10px 0;
+}
+
+.contact-me-form{
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+}
+
+.contact-me-heading{
+    font-size: 5em;
+    color: var(--bg-orange);
+    padding-top: 2rem;
+    font-weight: bold;
+}
+
+.contact-me-subheading{
+    font-size: 3rem;
+    color: #343d68aa;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.form-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.formfield{
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1f1f1f;
+    font-weight: 500;
+    border: none;
+}
+
+/* .formfield{
+    width: 100%;
+    left: 50%;
+} */
+
+/* .form-content input,textarea{
+    width: 100%;
+    left: 50%;
+} */
+
+/* .form-content{
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 50px;
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+*/
+
+
+
+.btn-pink{
+    left: 55px;
+    bottom: 10px; 
+}
+
+.formfield-textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+
+footer{
+  position:relative;
+  margin-top:-1px;
+  background-color: #343d68;
+  padding:5rem;
+}
+
+.footer-wrapper{
+  display:flex;
+  gap:1rem;
+  padding:1.2rem;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.footer-faded-text{
+  position:absolute;
+  left:0;
+  bottom:0;color:#535c87;
+  user-select:none;
+  font-size:5em;
+}
+
+.link-wrapper{
+    transform: translateX(400px);
+  display:flex;
+  gap:1.2rem;
+}
+
+.link-wrapper a{
+  color:white;
+  text-decoration:none;
+  transition:all 0.6s;
+}
+
+.link-wrapper div a:hover{
+  color:var(--bgOrange);
+}
+
+.icon-wrapper{
+  display:flex;
+  gap:1rem;
+}
