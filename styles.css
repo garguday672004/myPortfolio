@@ -81,11 +81,11 @@
 .unselected-text-Uday{
     position: absolute;
     user-select: none;
-    font-size: 6em;
+    font-size: 7em;
     color: rgb(231, 231, 231);
 
-    bottom: -16%;
-    left: -5%;
+    bottom: -14%;
+    left: 0%;
     font-weight: bold;
 
 }
@@ -113,6 +113,7 @@
 }
 
 .btn-pink {
+    text-decoration: none;
     background-color: #e84949;
     width: fit-content;
     color: white;
@@ -470,7 +471,7 @@
     color: rgb(231, 231, 231);
     user-select: none;
     bottom: -30%;
-    right: 0%;
+    right: 6%;
 }
 
 .skills-logo{
