@@ -81,7 +81,7 @@
 .unselected-text-Uday{
     position: absolute;
     user-select: none;
-    font-size: 7em;
+    font-size: 6em;
     color: rgb(231, 231, 231);
 
     bottom: -16%;
@@ -279,7 +279,7 @@
     position: relative;
     width: 90%;
     height: 550px;
-    background-image: url(./projects/Project2.png);
+    background-image: url(Project2.png);
     background-size: cover;
     box-shadow: 0px 0px 40px #1f1f1f;
 }
@@ -404,21 +404,21 @@
 }
 
 #card1{
-    background-image: url(./projects/Project1.png);
+    background-image: url(Project1.png);
 }
 
 #card2{
     margin-left: 120px;
-    background-image: url(./projects/Project2.png);
+    background-image: url(Project2.png);
 }
 
 #card3{
-    background-image: url(./projects/Project3.png);
+    background-image: url(Project3.png);
 }
 
 #card4{
     margin-left: 120px;
-    background-image: url(./projects/Project4.png);
+    background-image: url(Project4.png);
 }
 
 .me-and-tech-stack{
